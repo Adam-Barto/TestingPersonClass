@@ -2,6 +2,7 @@ package com.zipcodewilmington.person;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.experimental.theories.suppliers.TestedOn;
 
 /**
  * Created by leon on 2/12/18.
@@ -119,4 +120,91 @@ public class TestPerson {
         Boolean actual = person.isSatDown();
         Assert.assertEquals(expected, actual);
     }
+    @Test
+    public void testPronouns(){
+        Person person = new Person();
+        String expected = "She/Her";
+
+        // When
+        person.setPronouns(expected);
+
+        // Then
+        String actual = person.getProunouns();
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void testPronouns2(){
+        Person person = new Person();
+        String expected = "He/They";
+
+        // When
+        person.setPronouns(expected);
+
+        // Then
+        String actual = person.getProunouns();
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void testHobbies(){
+        Person person = new Person();
+        String expected = "Debating people online";
+
+        // When
+        person.setHobbies(expected);
+
+        // Then
+        String actual = person.getHobbies();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testHobbies2(){
+        Person person = new Person();
+        String expected = "Chess";
+
+        // When
+        person.setHobbies(expected);
+
+        // Then
+        String actual = person.getHobbies();
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void testisSleeping(){
+        Person person = new Person();
+        Boolean expected = false;
+
+        // When
+        person.makeSleep(expected);
+
+        // Then
+        Boolean actual = person.isSleeping();
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void testisSleeping2(){
+        Person person = new Person();
+        Boolean expected = true;
+
+        // When
+        person.makeSleep(expected);
+
+        // Then
+        Boolean actual = person.isSleeping();
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void testGetHeight(){
+        Person person = new Person();
+        double expected = 5.1;
+
+        // When
+        person.setHeight(expected);
+
+        // Then
+        double actual = person.getHeight();
+        Assert.assertEquals(expected, actual,0.1);
+    }
+
+
 }
