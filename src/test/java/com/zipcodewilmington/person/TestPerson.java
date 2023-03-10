@@ -95,4 +95,28 @@ public class TestPerson {
         Integer actual = person.getAge();
         Assert.assertEquals(expected, actual);
     }
+    @Test
+    public void testIsSeated(){
+        Person person = new Person();
+        Boolean expected = true;
+
+        // When
+        person.setSit(expected);
+
+        // Then
+        Boolean actual = person.isSatDown();
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void testIsSeated2(){
+        Person person = new Person();
+        Boolean expected = false;
+
+        // When
+        person.setSit(expected);
+
+        // Then
+        Boolean actual = person.isSatDown();
+        Assert.assertEquals(expected, actual);
+    }
 }

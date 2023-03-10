@@ -6,6 +6,7 @@ package com.zipcodewilmington.person;
 public class Person {
     private String name;
     private int age;
+    private boolean isSeated;
     public Person() {
         name = "";
         age = Integer.MAX_VALUE;
@@ -38,5 +39,13 @@ public class Person {
 
     public Integer getAge() {
         return age;
+    }
+//My Methods
+    public Boolean isSatDown() {
+        return isSeated;
+    }
+
+    public void setSit(Boolean willSit) {
+        this.isSeated = willSit;
     }
 }
