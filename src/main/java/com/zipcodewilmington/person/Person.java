@@ -14,6 +14,10 @@ public class Person {
     public Person() {
         name = "";
         age = Integer.MAX_VALUE;
+//        pronouns = "They/Them";
+//        height = 4.1;
+//        is_sleeping = false;
+//        hobby = "Coding";
     }
 
     public Person(int age) {
